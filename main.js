@@ -36,7 +36,6 @@ let team2 = {
 
 
 //Statistical Functions
-//Press + to expand if you want to see
 //Function for comparing Starting Pitchers ERA
 
 const {era} = require("./functions /spEra");
