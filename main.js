@@ -1,3 +1,4 @@
+//Author Taylor Birchem
 // Starting points for both teams rating
 
 const t1Points = 0;
@@ -167,6 +168,7 @@ function t2PT(t2Points){
         if (team2.rhpBA >= .242) {
             t2Points = t2Points + 0;
         }
+
 
         if (team2.bigInjuries >= 2) {
             t2Points = t2Points - 1;
