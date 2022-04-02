@@ -1,0 +1,13 @@
+//Team 2 = Rangers
+
+let team2 = {
+    spERA: 3.19, //weight of 1
+    tPR: 21,     //weight of 2,1,0
+    tOPS: .670,  //weight of 2
+    tERA: 4.80,  //weight of 2
+    tBA: .232,   //weight of 1
+    lhpBA: .233, //weight of 2
+    rhpBA: .232, //weight of 2
+    streak: 0,   //weight of 1
+    bigInjuries: 0, //weight of -1
+}

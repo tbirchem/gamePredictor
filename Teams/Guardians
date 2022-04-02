@@ -1,0 +1,13 @@
+//Team 2 = Guardians
+
+let team2 = {
+    spERA: 3.17, //weight of 1
+    tPR: 19,     //weight of 2,1,0
+    tOPS: .710,  //weight of 2
+    tERA: 4.34,  //weight of 2
+    tBA: .238,   //weight of 1
+    lhpBA: .244, //weight of 2
+    rhpBA: .235, //weight of 2
+    streak: 0,   //weight of 1
+    bigInjuries: 0, //weight of -1
+}

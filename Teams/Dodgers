@@ -1,0 +1,13 @@
+//Team 2 = Dodgers
+
+let team2 = {
+    spERA: 3.19, //weight of 1
+    tPR: 3,     //weight of 2,1,0
+    tOPS: .759,  //weight of 2
+    tERA: 3.03,  //weight of 2
+    tBA: .244,   //weight of 1
+    lhpBA: .243, //weight of 2
+    rhpBA: .245, //weight of 2
+    streak: 0,   //weight of 1
+    bigInjuries: 0, //weight of -1
+}

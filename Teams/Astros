@@ -1,0 +1,13 @@
+//Team 2 = Astros
+
+let team2 = {
+    spERA: 3.14, //weight of 1
+    tPR: 7,     //weight of 2,1,0
+    tOPS: .783,  //weight of 2
+    tERA: 3.8,  //weight of 2
+    tBA: .267,   //weight of 1
+    lhpBA: .270, //weight of 2
+    rhpBA: .266, //weight of 2
+    streak: 0,   //weight of 1
+    bigInjuries: 0, //weight of -1
+}
