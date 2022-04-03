@@ -130,10 +130,10 @@ function t1PT(t1Points){
         if (starPitcher(team1) === true) {
             t1Points = t1Points + 2;
         }
-        if (randomizeTeam1(t1Points,t2Points) === 2){
+        if (randomizeTeam1() === 2){
             t1Points = t1Points + 2;
         }
-        if (randomizeTeam1(t1Points,t2Points) === 12){
+        if (randomizeTeam1() === 12){
             t1Points = t1Points + 2;
         }
     }
@@ -189,10 +189,10 @@ function t2PT(t2Points){
         if (starPitcher2(team2) === true) {
             t2Points = t2Points + 2;
         }
-        if (randomizeTeam2(t1Points,t2Points) === 2){
+        if (randomizeTeam2() === 2){
             t2Points = t2Points + 2;
         }
-        if (randomizeTeam2(t1Points,t2Points) === 12){
+        if (randomizeTeam2() === 12){
             t2Points = t2Points + 2;
         }
     }
