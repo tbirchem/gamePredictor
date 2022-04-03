@@ -7,33 +7,34 @@ const t2Points = 0;
 
 // * Teams receive + 2 points if Starting pitchers ERA is 3.35 or lower *
 
-//Team 1 = Astros
+//Team 1 = Mariners
 
 let team1 = {
-    spERA: 3.14, //weight of 1
-    tPR: 7,     //weight of 2,1,0
-    tOPS: .783,  //weight of 2
-    tERA: 3.8,  //weight of 2
-    tBA: .267,   //weight of 1
-    lhpBA: .270, //weight of 2
-    rhpBA: .266, //weight of 2
-    streak: 0,   //weight of 1 or 2 if win streak is 5
-    bigInjuries: 0, //weight of -1 or -2 if 3+ big injuries
+    spERA: 2.84, //weight of 1
+    tPR: 16,     //weight of 2,1,0
+    tOPS: .688,  //weight of 2
+    tERA: 4.30,  //weight of 2
+    tBA: .226,   //weight of 1
+    lhpBA: .231, //weight of 2
+    rhpBA: .223, //weight of 2
+    streak: 0,   //weight of 1
+    bigInjuries: 0, //weight of -1
 }
 
-//Team 2 = Angels
+//Team 2 = Twins
 
 let team2 = {
-    spERA: 3.18, //weight of 1
-    tPR: 15,     //weight of 2,1 or 0
-    tOPS: .717,  //weight of 2
-    tERA: 4.69,  //weight of 2
-    tBA: .245,   //weight of 1
-    lhpBA: .248, //weight of 2
-    rhpBA: .243, //weight of 2
-    streak: 0,   //weight of 1 or 2 if win streak is 5
-    bigInjuries: 0, //weight of -1 or -2 if 3+ big injuries
+    spERA: 4.66, //weight of 1
+    tPR: 17,     //weight of 2,1,0
+    tOPS: .738,  //weight of 2
+    tERA: 4.83,  //weight of 2
+    tBA: .241,   //weight of 1
+    lhpBA: .244, //weight of 2
+    rhpBA: .240, //weight of 2
+    streak: 0,   //weight of 1
+    bigInjuries: 0, //weight of -1
 }
+
 
 
 //Statistical Functions
@@ -77,6 +78,9 @@ const {starPitcher} = require('./functions /starPitcher');
 
 const {starPitcher2} = require('./functions /starPitcher2');
 
+const {randomizeTeam1} = require('./functions /randomize.js');
+
+const {randomizeTeam2} = require('./functions /randomize2.js');
 
 //Function to add up Team 1's points
 
@@ -124,6 +128,12 @@ function t1PT(t1Points){
             t1Points = t1Points - 1;
         }
         if (starPitcher(team1) === true) {
+            t1Points = t1Points + 2;
+        }
+        if (randomizeTeam1(t1Points,t2Points) === 2){
+            t1Points = t1Points + 2;
+        }
+        if (randomizeTeam1(t1Points,t2Points) === 12){
             t1Points = t1Points + 2;
         }
     }
@@ -177,6 +187,12 @@ function t2PT(t2Points){
             t2Points = t2Points - 1;
         }
         if (starPitcher2(team2) === true) {
+            t2Points = t2Points + 2;
+        }
+        if (randomizeTeam2(t1Points,t2Points) === 2){
+            t2Points = t2Points + 2;
+        }
+        if (randomizeTeam2(t1Points,t2Points) === 12){
             t2Points = t2Points + 2;
         }
     }
@@ -292,6 +308,7 @@ function confidenceTeam2Unit3(){
     }
 }
 
+
 console.log("Team 1 Points: ",t1PT(t1Points))
 console.log("Team 2 Points: ",t2PT(t2Points))
 console.log(findWinner())
@@ -303,3 +320,6 @@ console.log(fiftyFiftyTeam2())
 console.log(confidenceTeam2Unit1())
 console.log(confidenceTeam2Unit2())
 console.log(confidenceTeam2Unit3())
+
+//console.log(randomizeTeam1())
+//console.log(randomizeTeam2())
