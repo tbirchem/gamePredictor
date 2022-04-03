@@ -1,5 +1,5 @@
 //Author Taylor Birchem
-// Starting points for both teams rating
+//Starting points for both teams rating
 
 const t1Points = 0;
 
@@ -17,8 +17,8 @@ let team1 = {
     tBA: .267,   //weight of 1
     lhpBA: .270, //weight of 2
     rhpBA: .266, //weight of 2
-    streak: 0,   //weight of 1
-    bigInjuries: 0, //weight of -1
+    streak: 0,   //weight of 1 or 2 if win streak is 5
+    bigInjuries: 0, //weight of -1 or -2 if 3+ big injuries
 }
 
 //Team 2 = Angels
@@ -31,8 +31,8 @@ let team2 = {
     tBA: .245,   //weight of 1
     lhpBA: .248, //weight of 2
     rhpBA: .243, //weight of 2
-    streak: 0,   //weight of 1
-    bigInjuries: 0, // weight of -1
+    streak: 0,   //weight of 1 or 2 if win streak is 5
+    bigInjuries: 0, //weight of -1 or -2 if 3+ big injuries
 }
 
 

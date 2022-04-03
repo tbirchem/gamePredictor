@@ -9,5 +9,5 @@ let team1 = {
     lhpBA: .248, //weight of 2
     rhpBA: .243, //weight of 2
     streak: 0,   //weight of 1
-    bigInjuries: 0, // weight of -1
+    bigInjuries: 0, //weight of -1
 }

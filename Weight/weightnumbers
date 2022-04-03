@@ -1,0 +1,11 @@
+let team1 = {
+    spERA:       //weight of 1
+    tPR:         //weight of 2,1,0
+    tOPS:        //weight of 2
+    tERA:        //weight of 2
+    tBA:         //weight of 1
+    lhpBA:       //weight of 2
+    rhpBA:       //weight of 2
+    streak:      //weight of 1 or 2 if win streak is 5
+    bigInjuries: //weight of -1 or -2 if 3+ big injuries
+}
