@@ -321,5 +321,5 @@ console.log(confidenceTeam2Unit1())
 console.log(confidenceTeam2Unit2())
 console.log(confidenceTeam2Unit3())
 
-//console.log(randomizeTeam1())
-//console.log(randomizeTeam2())
+console.log(randomizeTeam1())
+console.log(randomizeTeam2())
