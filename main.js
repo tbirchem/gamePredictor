@@ -78,7 +78,11 @@ const {starPitcher} = require('./functions /starPitcher');
 
 const {starPitcher2} = require('./functions /starPitcher2');
 
+//Adds 2 points randomly if dice rolls a 2 or 12
+
 const {randomizeTeam1} = require('./functions /randomize.js');
+
+//Adds 2 points randomly if dice rolls a 2 or 12
 
 const {randomizeTeam2} = require('./functions /randomize2.js');
 
@@ -321,5 +325,5 @@ console.log(confidenceTeam2Unit1())
 console.log(confidenceTeam2Unit2())
 console.log(confidenceTeam2Unit3())
 
-console.log("Dice roll for team 1:", randomizeTeam1())
-console.log("Dice roll for team 2:", randomizeTeam2())
+//console.log("Dice rolls for team 1 (only affects score if it's a 2 or 12):", randomizeTeam1())
+//console.log("Dice rolls for team 2 (only affects score if it's a 2 or 12):", randomizeTeam2())
