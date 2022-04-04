@@ -7,34 +7,33 @@ const t2Points = 0;
 
 // * Teams receive + 2 points if Starting pitchers ERA is 3.35 or lower *
 
-//Team 1 = Mariners
+//Team 1 = Pirates
 
 let team1 = {
-    spERA: 2.84, //weight of 1
-    tPR: 16,     //weight of 2,1,0
-    tOPS: .688,  //weight of 2
-    tERA: 4.30,  //weight of 2
-    tBA: .226,   //weight of 1
-    lhpBA: .231, //weight of 2
-    rhpBA: .223, //weight of 2
+    spERA: 5.36, //weight of 1
+    tPR: 30,     //weight of 2,1,0
+    tOPS: .672,  //weight of 2
+    tERA: 5.08,  //weight of 2
+    tBA: .236,   //weight of 1
+    lhpBA: .236, //weight of 2
+    rhpBA: .236, //weight of 2
     streak: 0,   //weight of 1
     bigInjuries: 0, //weight of -1
 }
 
-//Team 2 = Twins
+//Team 2 = Cardinals
 
 let team2 = {
-    spERA: 4.66, //weight of 1
-    tPR: 17,     //weight of 2,1,0
-    tOPS: .738,  //weight of 2
-    tERA: 4.83,  //weight of 2
-    tBA: .241,   //weight of 1
-    lhpBA: .244, //weight of 2
+    spERA: 3.05, //weight of 1
+    tPR: 14,     //weight of 2,1,0
+    tOPS: .725,  //weight of 2
+    tERA: 4.00,  //weight of 2
+    tBA: .244,   //weight of 1
+    lhpBA: .256, //weight of 2
     rhpBA: .240, //weight of 2
     streak: 0,   //weight of 1
     bigInjuries: 0, //weight of -1
 }
-
 
 
 //Statistical Functions
@@ -176,11 +175,11 @@ function t2PT(t2Points){
         //CHECK BEFORE RUNNING
         //Enter "+ 0" if team 1 is throwing a Right-handed pitcher
         if (team2.lhpBA >= .250) {
-            t2Points = t2Points + 2;
+            t2Points = t2Points + 0;
         }
         //Enter "+ 0" if team 1 is throwing a Left-handed pitcher
         if (team2.rhpBA >= .242) {
-            t2Points = t2Points + 0;
+            t2Points = t2Points + 2;
         }
 
 
@@ -325,5 +324,5 @@ console.log(confidenceTeam2Unit1())
 console.log(confidenceTeam2Unit2())
 console.log(confidenceTeam2Unit3())
 
-//console.log("Dice rolls for team 1 (only affects score if it's a 2 or 12):", randomizeTeam1())
-//console.log("Dice rolls for team 2 (only affects score if it's a 2 or 12):", randomizeTeam2())
+console.log("Dice rolls for team 1 (only affects score if it's a 2 or 12):", randomizeTeam1())
+console.log("Dice rolls for team 2 (only affects score if it's a 2 or 12):", randomizeTeam2())
